@@ -4,12 +4,13 @@ import os
 import numpy as np
 from PIL import Image
 
-a=input("Enter new DOCTOR name: ")
+# a=input("Enter new DOCTOR name: ")
 
-with open('id.csv', newline='') as f:
-    reader = csv.reader(f)
-    name_list = list(reader)
-employee_id = int(name_list[0][0])
+# with open('id.csv', newline='') as f:
+#     reader = csv.reader(f)
+#     name_list = list(reader)
+
+employee_id = 1
 cam = cv2.VideoCapture(0)
 cam.set(3, 640) 
 cam.set(4, 480) 
@@ -17,7 +18,7 @@ cam.set(4, 480)
 face_detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 face_id = employee_id
-samples=100
+samples=30
 
 print("\n [INFO] Initializing face capture. Look the camera and wait ...")
 count = 0
@@ -82,35 +83,36 @@ recognizer.save('trainer/trainer.yml')
 print("\n [INFO] {0} faces trained. Exiting Program".format(len(np.unique(ids))))
 
 
-with open('id.csv', 'w') as file:
-    writer = csv.writer(file)
-    writer.writerow([(employee_id+1)])
+# with open('id.csv', 'w') as file:
+#     writer = csv.writer(file)
+#     writer.writerow([(employee_id+1)])
 
-with open('Doctors.csv', 'a+') as file:
-    writer = csv.writer(file)
-    writer.writerow([a])
+# with open('Doctors.csv', 'a+') as file:
+#     writer = csv.writer(file)
+#     writer.writerow([a])
+
 print("Writing the new employee into the system!")
 print("Please keep your head straight to collect photo for Profile Picture")
 from time import sleep
 sleep(3)
 
 
-import csv
-import cv2
-import os
-import numpy as np
-from PIL import Image
+# import csv
+# import cv2
+# import os
+# import numpy as np
+# from PIL import Image
 
-cap = cv2.VideoCapture(0)
-get_picture_id = 0
-while(True):
-    ret, frame = cap.read()
-    get_picture_id = get_picture_id + 1
-    cv2.imshow('frame', frame)
-    k = cv2.waitKey(10) & 0xff 
-    if k == 27 or get_picture_id==30:
-        cv2.imwrite("profile_pictures/" + a + ".jpg",frame)
-        break
+# cap = cv2.VideoCapture(0)
+# get_picture_id = 0
+# while(True):
+#     ret, frame = cap.read()
+#     get_picture_id = get_picture_id + 1
+#     cv2.imshow('frame', frame)
+#     k = cv2.waitKey(10) & 0xff 
+#     if k == 27 or get_picture_id==30:
+#         cv2.imwrite("profile_pictures/" + a + ".jpg",frame)
+#         break
         
-cap.release()
-cv2.destroyAllWindows()
+# cap.release()
+# cv2.destroyAllWindows()
