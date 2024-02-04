@@ -40,7 +40,7 @@ def user_data(request):
         return JsonResponse({'message': '{} Alerts were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
 
 
-@api_view(['GET', 'DELETE', 'PUT'])
+@api_view(['GET', 'DELETE'])
 def user_name(request, name):
     # tutorials = Tutorial.objects.filter(title=title)
     tutorials = Tutorial.objects.filter(
