@@ -1,9 +1,9 @@
-from django.conf.urls import url
-from user import views
 from django.urls import path
+from user import views
 
 urlpatterns = [
-    url(r'^user/$', views.user_data),
+    path('user/', views.user_data),
     path('user/<str:name>/', views.user_name),
-    path('user/<str:name>/update/', views.update_criminal),
+    path('user/<str:name>/update', views.update_user_name),  
 ]
+
