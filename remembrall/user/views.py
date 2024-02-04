@@ -56,7 +56,7 @@ def user_name(request, name):
 @api_view(['PUT'])
 def update_criminal(request, name):
     try:
-        tutorial = Tutorial.objects.get(computer_name=name)
+        tutorial = Tutorial.objects.get(user_name=name)
     except Tutorial.DoesNotExist:
         return JsonResponse({'message': 'The alert does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
