@@ -10,9 +10,8 @@ TRACK CHOSEN
 PROGRESS
 - [X] API Development 
 - [X] API Deployment
-- [ ] Mobile App
-- [ ] Face recognition 
-- [ ] Log Generator
+- [X] Face recognition 
+- [X] Log Generator
 - [ ] Heads-up Display
 - [ ] Presentation
 - [ ] Video
