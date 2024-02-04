@@ -12,6 +12,7 @@ PROGRESS
 - [X] API Deployment
 - [X] Face recognition 
 - [X] Log Generator
-- [ ] Heads-up Display
-- [ ] Presentation
-- [ ] Video
+- [X] Heads-up Display (Separate Components Done)
+- [X] Presentation
+- [X] Video
+
